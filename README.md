@@ -51,7 +51,11 @@
 
 Kiến trúc được tổ chức theo **monorepo** để frontend, backend, database schema và tài liệu nằm trong cùng repository nhưng vẫn tách biệt trách nhiệm.
 
-## 4. Phạm vi chức năng
+## 4. Định hướng giao diện và màu sắc
+
+BuyGuide sử dụng bảng màu thiên nhiên, tối giản và cao cấp theo mẫu màu đã được chủ dự án chọn: Denim Blue `#202C60`, Carolina Blue `#8FACCA`, Beige `#F5F3DC`, Pistachio `#B6CF7B` và Fern Green `#4C7026`. Hồng pastel không còn là màu chủ đạo. Xem [Design System & Brand Colors](docs/design-system.md).
+
+## 5. Phạm vi chức năng
 
 ### Khách hàng
 - Đăng ký, đăng nhập, cập nhật hồ sơ và địa chỉ.
@@ -69,7 +73,7 @@ Kiến trúc được tổ chức theo **monorepo** để frontend, backend, dat
 - Quản lý đơn hàng, xác nhận, cập nhật trạng thái và hủy đơn.
 - Quản lý khách hàng và phân quyền theo vai trò.
 
-## 5. Kiến trúc hệ thống
+## 6. Kiến trúc hệ thống
 
 ```mermaid
 flowchart TB
@@ -92,7 +96,7 @@ flowchart TB
 - Các thao tác nhiều bước liên quan đến tiền và tồn kho phải dùng transaction database.
 - Ảnh tư vấn da phải được lưu riêng tư, kiểm soát quyền truy cập và hỗ trợ xóa.
 
-## 6. Tiến độ dự án
+## 7. Tiến độ dự án
 
 | Giai đoạn | Nội dung | Trạng thái |
 |---|---|---|
@@ -107,11 +111,12 @@ flowchart TB
 
 Mỗi giai đoạn cần có đầu ra, tiêu chí nghiệm thu và kiểm thử trước khi chuyển sang giai đoạn tiếp theo.
 
-## 7. Tài liệu
+## 8. Tài liệu
 
 - [Kiến trúc hệ thống, ERD và mô tả Database](docs/architecture.md)
+- [Design System & Brand Colors](docs/design-system.md)
 
-## 8. Quy tắc nghiệp vụ quan trọng
+## 9. Quy tắc nghiệp vụ quan trọng
 
 1. Mật khẩu chỉ lưu dưới dạng hash; không lưu mật khẩu thuần.
 2. Giá tiền dùng kiểu `DECIMAL`, không dùng số thực dấu phẩy động.
@@ -124,7 +129,7 @@ Mỗi giai đoạn cần có đầu ra, tiêu chí nghiệm thu và kiểm thử
 9. Ảnh tư vấn da không được công khai bằng URL không bảo vệ; chỉ chủ sở hữu và nhân sự có quyền mới được truy cập theo chính sách.
 10. Tư vấn da không đưa ra chẩn đoán bệnh.
 
-## 9. Cấu trúc repository dự kiến
+## 10. Cấu trúc repository dự kiến
 
 ```text
 BuyGuide_App/
@@ -150,11 +155,11 @@ BuyGuide_App/
 
 Cấu trúc trên là cấu trúc mục tiêu; các thư mục và mã nguồn sẽ được tạo ở những giai đoạn tương ứng.
 
-## 10. Trạng thái hiện tại
+## 11. Trạng thái hiện tại
 
 Repository đang ở giai đoạn khởi tạo tài liệu và thiết kế. Chưa có chức năng bán hàng hoặc API nào được xem là hoàn thành cho đến khi được triển khai và kiểm thử.
 
-## 11. Định hướng đóng góp và phát triển
+## 12. Định hướng đóng góp và phát triển
 
 - Làm việc theo từng giai đoạn, không bỏ qua kiểm thử.
 - Đặt tên biến, hàm, API và database nhất quán.
